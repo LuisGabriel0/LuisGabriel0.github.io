@@ -37,17 +37,17 @@ hr {
     margin-top: 0;
 }
 
-/* Estilo dos links */
-a {
-    text-decoration: none;
-    color: white;
-}
-
 /* Centraliza o elemento e seus filhos */
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Estilo dos links do menu */
+.menu a {
+    text-decoration: none;
+    color: white;
 }
 
 /* Botões da navegação entre as páginas */
@@ -68,7 +68,7 @@ a {
 /* Título da página atual */
 .title h1 {
     margin: 0;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px 1px 2px black; /* Sombra no texto para melhorar a visualização */
 }
 
 /* Descrição do título da página atual */
@@ -79,45 +79,11 @@ a {
     text-shadow: 1px 1px 2px black;
 }
 
-/* Container do contato */
-#contato {
-    margin-top: 10px;
-}
-
-/* Campos de texto do contato */
-#contato input,
-textarea {
-    width: 500px;
-    resize: none;
-    padding: 8px;
-    border: 1px white solid;
-    border-radius: 6px;
-}
-
-/* Botão de enviar do contato */
-#contato button {
-    margin-top: 10px;
-    padding: 8px;
-    border: none;
-    border-radius: 6px;
-}
-
-/* Efeito ao passar o mouse sobre o botão enviar */
-#contato button:hover {
-    background-color: darkgray;
-}
-
-/* Efeito ao clicar no botão enviar */
-#contato button:active {
-    background-color: gray;
-}
-
 /* Container dos cards */
 .card_container {
     display: flex;
     flex-wrap: wrap;
-    /* Espaçamento entre os cards */
-    gap: 16px;
+    gap: 16px; /* Espaçamento entre os cards */
     justify-content: center;
 }
 
@@ -138,8 +104,7 @@ textarea {
 /* Estilo da lista das imagens do card */
 .card_imgs {
     display: flex;
-    /* Espaçamento entre as imagens */
-    gap: 16px;
+    gap: 16px; /* Espaçamento entre as imagens */
     justify-content: center;
 }
 
@@ -155,10 +120,10 @@ textarea {
 }
 
 /* Título do card */
-.card_content h2 {
-    font-size: 1.5em;
+.card_content h2,a {
     margin: 0;
     color: #333;
+    text-decoration: none;
 }
 
 /* Descrição do card */
@@ -167,4 +132,43 @@ textarea {
     color: #666;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+/* Container do form do contato */
+#contato {
+    margin-top: 10px;
+}
+
+/* Campos de texto do contato */
+#contato input,textarea {
+    width: 500px;
+    resize: none;
+    padding: 8px;
+    border: 1px white solid;
+    border-radius: 6px;
+}
+
+/* Estilos do botão enviar */
+#contato button {
+    margin-top: 8px;
+    background-color: #329EF4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 0.9em;
+    cursor: pointer; /* Cursor de clicar ao passar sobre o botão */
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+/* Efeito ao passar o mouse sobre o botão enviar */
+#contato button:hover {
+    background-color: #329df4ad;
+}
+
+/* Efeito ao clicar no botão enviar */
+#contato button:active {
+    background-color: #329df491;
+    box-shadow: 0 0 0 1px #329df491;
 }
